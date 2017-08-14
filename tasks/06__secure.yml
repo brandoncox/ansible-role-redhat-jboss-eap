@@ -1,1 +1,13 @@
+#TODO
 
+#Remove remote connector for JMX
+#https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html-single/Security_Guide/index.html#Disable_Remote_Access_to_the_JMX_Subsystem1
+#/subsystem=jmx/remoting-connector=jmx/:remove
+
+#Remove silent authentication of security realm
+#https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html-single/Security_Guide/index.html#Remove_Silent_Authentication_from_the_Default_Security_Realm
+#/core-service=management/security-realm=ManagementRealm/authentication=local:remove
+
+#Disable web console for administration
+#https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html-single/Security_Guide/index.html#Disable_the_HTTP_Management_Interface
+#/core-service=management/management-interface=http-interface/:write-attribute(name=console-enabled,value=false)
